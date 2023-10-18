@@ -64,6 +64,7 @@ public class ArticleStore implements Store<Article>, AutoCloseable {
             while (key.next()) {
                 model.setId(key.getInt(1));
             }
+
         } catch (Exception e) {
             LOGGER.error("Не удалось выполнить операцию: { }", e.getCause());
             throw new IllegalStateException();
